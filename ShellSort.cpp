@@ -1,6 +1,9 @@
 #include "stuff.h"
 #include <vector>
+#include <iostream>
 #include <cmath>
+
+void ShellSort(std::vector<Stuff>& s, int code);
 
 //this code implements shellsort to sort vector s in stuff in DESCENDING ORDER
 void ShellSort(vector<Stuff> &s, int code) {
