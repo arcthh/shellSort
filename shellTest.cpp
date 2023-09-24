@@ -2,7 +2,7 @@
 #include <ctime>		// keep this line if you want to generate different random objects for each run
 #include "stuff.h"
 
-main()
+int main()
 {
    srand(time(0));		// keep this line if you want to generate different random objects for each run
    vector<Stuff> vec;
@@ -30,4 +30,6 @@ main()
 
    cout << (vec[0] < vec[1]) << endl;
    cout << "compareCount : " << Stuff::compareCount << endl;
+
+   return 0;
 }
