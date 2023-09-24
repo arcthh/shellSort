@@ -2,7 +2,6 @@
 
 using namespace std;
 
-
 class Stuff {
 
 	friend ostream& operator<<(ostream& os, const Stuff& s);

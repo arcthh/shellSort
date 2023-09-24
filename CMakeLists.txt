@@ -6,6 +6,6 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 add_compile_options(-Wall -Wextra -pedantic)
 
 # executables
-add_executable(test ShellSort.cpp shellTest.cpp stuff.cpp)
+add_executable(test shellTest.cpp stuff.cpp)
 
 set(CMAKE_VERBOSE_MAKEFILE OFF)

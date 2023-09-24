@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test.dir/ShellSort.cpp.o"
-  "CMakeFiles/test.dir/ShellSort.cpp.o.d"
   "CMakeFiles/test.dir/shellTest.cpp.o"
   "CMakeFiles/test.dir/shellTest.cpp.o.d"
   "CMakeFiles/test.dir/stuff.cpp.o"

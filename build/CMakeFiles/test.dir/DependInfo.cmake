@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/root/algorithms/shellSort/ShellSort.cpp" "CMakeFiles/test.dir/ShellSort.cpp.o" "gcc" "CMakeFiles/test.dir/ShellSort.cpp.o.d"
   "/root/algorithms/shellSort/shellTest.cpp" "CMakeFiles/test.dir/shellTest.cpp.o" "gcc" "CMakeFiles/test.dir/shellTest.cpp.o.d"
   "/root/algorithms/shellSort/stuff.cpp" "CMakeFiles/test.dir/stuff.cpp.o" "gcc" "CMakeFiles/test.dir/stuff.cpp.o.d"
   )

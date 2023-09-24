@@ -1,3 +1,5 @@
 /root/algorithms/shellSort/build/CMakeFiles/test.dir
+/root/algorithms/shellSort/build/CMakeFiles/package.dir
+/root/algorithms/shellSort/build/CMakeFiles/package_source.dir
 /root/algorithms/shellSort/build/CMakeFiles/edit_cache.dir
 /root/algorithms/shellSort/build/CMakeFiles/rebuild_cache.dir

@@ -65,6 +65,26 @@ CMAKE_BINARY_DIR = /root/algorithms/shellSort/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	/usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /root/algorithms/shellSort/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -129,30 +149,6 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
-ShellSort.o: ShellSort.cpp.o
-.PHONY : ShellSort.o
-
-# target to build an object file
-ShellSort.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/ShellSort.cpp.o
-.PHONY : ShellSort.cpp.o
-
-ShellSort.i: ShellSort.cpp.i
-.PHONY : ShellSort.i
-
-# target to preprocess a source file
-ShellSort.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/ShellSort.cpp.i
-.PHONY : ShellSort.cpp.i
-
-ShellSort.s: ShellSort.cpp.s
-.PHONY : ShellSort.s
-
-# target to generate assembly for a file
-ShellSort.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/ShellSort.cpp.s
-.PHONY : ShellSort.cpp.s
-
 shellTest.o: shellTest.cpp.o
 .PHONY : shellTest.o
 
@@ -208,11 +204,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... ShellSort.o"
-	@echo "... ShellSort.i"
-	@echo "... ShellSort.s"
 	@echo "... shellTest.o"
 	@echo "... shellTest.i"
 	@echo "... shellTest.s"

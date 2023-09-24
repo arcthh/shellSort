@@ -1,6 +1,7 @@
 #include <vector>
 #include <ctime>		// keep this line if you want to generate different random objects for each run
 #include "stuff.h"
+#include "ShellSort.h"
 
 int main()
 {
@@ -21,7 +22,7 @@ int main()
    cout << "-----\n";
 
    // uncomment this line when the shell sort is implemented
-   ShellSort(vec, 0);
+   ShellSort(vec, 9);
 
    for (int i = 0; i < 10; i++)
 	{
@@ -30,6 +31,7 @@ int main()
 
    cout << (vec[0] < vec[1]) << endl;
    cout << "compareCount : " << Stuff::compareCount << endl;
-
+   
    return 0;
+
 }
