@@ -9,6 +9,7 @@ void ShellSort(vector<Stuff> &s, int code) {
     //create h list vector 
     std::vector<int> hlist(size);
     int k = 0;
+
     //code is the integer denoting how hlist array is to be formed
     switch (code) {
         //code 0 - hlist should be [1] (insertion sort)
@@ -77,11 +78,12 @@ void ShellSort(vector<Stuff> &s, int code) {
         //default
         default:
             cerr << "ERROR: CODE IS INVALID";
-            exit(1);
+            break;
     }
 
-//professor has writen driver program that can be used to test correctness of algorithm
+    //now that hlist has been formed, implement the shell sort algorithm
 
+//professor has writen driver program that can be used to test correctness of algorithm
 
 
 }
