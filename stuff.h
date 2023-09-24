@@ -1,3 +1,6 @@
+#ifndef STUFF_H
+#define STUFF_H
+
 #include <iostream>
 
 using namespace std;
@@ -22,3 +25,5 @@ private:
 	int a, b, c;
 
 };
+
+#endif

@@ -22,7 +22,7 @@ int main()
    cout << "-----\n";
 
    // uncomment this line when the shell sort is implemented
-   ShellSort(vec, 9);
+   ShellSort(vec, 4);
 
    for (int i = 0; i < 10; i++)
 	{

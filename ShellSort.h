@@ -1,3 +1,6 @@
+#ifndef SHELLSORT_H
+#define SHELLSORT_H
+
 #include "stuff.h"
 #include <vector>
 #include <cmath>
@@ -17,6 +20,7 @@ void ShellSort(vector<Stuff> &s, int code) {
             //hlist should be 1 (insertion sort)
             hlist.push_back(1);
             k = 1;
+            cout << "Case 0";
             break;
 
         //code 1 - hlist should be  [k^2, (k-1)^2, ..., 4, 1]
@@ -31,6 +35,8 @@ void ShellSort(vector<Stuff> &s, int code) {
                 //iteration seq. is k^2, (k-1)^2...
                 hlist.at(i) = ((k-i) * (k-i));
             }
+            cout << "Case 1";
+
             break;
 
         //code 2 - hlist should be [2^k, 2^(k-1) , 2^(k-2) , ... 2, 1] 
@@ -43,6 +49,8 @@ void ShellSort(vector<Stuff> &s, int code) {
             for (int i = 0; i < k; i++) {
                 hlist.at(i) = pow(2, k-i);
             }
+             cout << "Case 2";
+           
             break;
 
         //code 3 - hlist should be [2^k -1, 2^(k-1) -1, 2^(k-2) -1 ... 3, 1] 
@@ -56,6 +64,8 @@ void ShellSort(vector<Stuff> &s, int code) {
             for (int i = 0; i < k; i++) {
                 hlist.at(i) = pow(2, k-i) - 1;
             }
+            cout << "Case 3";
+
             break;
 
         //code 4
@@ -74,11 +84,13 @@ void ShellSort(vector<Stuff> &s, int code) {
             if (hlist.size() == 0) {
                 hlist.push_back(1);
             }
+            cout << "Case 4";
+            break;
 
         //default
         default:
-            cerr << "ERROR: CODE IS INVALID";
-            break;
+            cerr << "ERROR: CODE IS INVALID\n";
+            exit(1);
     }
 
     // Implement the Shell Sort algorithm using the generated hlist
@@ -93,7 +105,7 @@ void ShellSort(vector<Stuff> &s, int code) {
             Stuff temp = s[i];
             int j = i; // j used for comparison
             // Compare and swap elements within the gap (gap) in descending order
-            while (j >= gap && temp < s[j - gap]) {
+            while (j >= gap && s[j - gap] < temp) {
                 s[j] = s[j - gap]; //move element to the right
                 j -= gap; // move to previous position in gap
             }
@@ -103,3 +115,4 @@ void ShellSort(vector<Stuff> &s, int code) {
     }
 
 }
+#endif
