@@ -81,9 +81,25 @@ void ShellSort(vector<Stuff> &s, int code) {
             break;
     }
 
-    //now that hlist has been formed, implement the shell sort algorithm
+    // Implement the Shell Sort algorithm using the generated hlist
+    //Implementation of shellsort referenced from King Ip Lin's Lecture on Insertion/Shell Sort
+    //hlist is list of descending number of p integers
 
-//professor has writen driver program that can be used to test correctness of algorithm
-
+    //autobased for loop to iterate through individual gap
+    for (int gap : hlist) {
+        // Perform Shell Sort with gap 
+        for (int i = gap; i < size; i++) {
+            //store temporary variable from vector s
+            Stuff temp = s[i];
+            int j = i; // j used for comparison
+            // Compare and swap elements within the gap (gap) in descending order
+            while (j >= gap && temp < s[j - gap]) {
+                s[j] = s[j - gap]; //move element to the right
+                j -= gap; // move to previous position in gap
+            }
+            // Insert temporarily stored element into correct position
+            s[j] = temp;
+        }
+    }
 
 }
