@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/root/algorithms/shellSort/build",
+  "command": "/usr/bin/g++   -g -Wall -Wextra -pedantic -o CMakeFiles/test.dir/shellTest.cpp.o -c /root/algorithms/shellSort/shellTest.cpp",
+  "file": "/root/algorithms/shellSort/shellTest.cpp"
+},
+{
+  "directory": "/root/algorithms/shellSort/build",
+  "command": "/usr/bin/g++   -g -Wall -Wextra -pedantic -o CMakeFiles/test.dir/stuff.cpp.o -c /root/algorithms/shellSort/stuff.cpp",
+  "file": "/root/algorithms/shellSort/stuff.cpp"
+}
+]

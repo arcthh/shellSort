@@ -73,29 +73,29 @@ CMakeFiles/test.dir/shellTest.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/shellTest.cpp.o: ../shellTest.cpp
 CMakeFiles/test.dir/shellTest.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/algorithms/shellSort/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/shellTest.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/shellTest.cpp.o -MF CMakeFiles/test.dir/shellTest.cpp.o.d -o CMakeFiles/test.dir/shellTest.cpp.o -c /root/algorithms/shellSort/shellTest.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/shellTest.cpp.o -MF CMakeFiles/test.dir/shellTest.cpp.o.d -o CMakeFiles/test.dir/shellTest.cpp.o -c /root/algorithms/shellSort/shellTest.cpp
 
 CMakeFiles/test.dir/shellTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/shellTest.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/algorithms/shellSort/shellTest.cpp > CMakeFiles/test.dir/shellTest.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/algorithms/shellSort/shellTest.cpp > CMakeFiles/test.dir/shellTest.cpp.i
 
 CMakeFiles/test.dir/shellTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/shellTest.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/algorithms/shellSort/shellTest.cpp -o CMakeFiles/test.dir/shellTest.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/algorithms/shellSort/shellTest.cpp -o CMakeFiles/test.dir/shellTest.cpp.s
 
 CMakeFiles/test.dir/stuff.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/stuff.cpp.o: ../stuff.cpp
 CMakeFiles/test.dir/stuff.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/algorithms/shellSort/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/stuff.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/stuff.cpp.o -MF CMakeFiles/test.dir/stuff.cpp.o.d -o CMakeFiles/test.dir/stuff.cpp.o -c /root/algorithms/shellSort/stuff.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/stuff.cpp.o -MF CMakeFiles/test.dir/stuff.cpp.o.d -o CMakeFiles/test.dir/stuff.cpp.o -c /root/algorithms/shellSort/stuff.cpp
 
 CMakeFiles/test.dir/stuff.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/stuff.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/algorithms/shellSort/stuff.cpp > CMakeFiles/test.dir/stuff.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/algorithms/shellSort/stuff.cpp > CMakeFiles/test.dir/stuff.cpp.i
 
 CMakeFiles/test.dir/stuff.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/stuff.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/algorithms/shellSort/stuff.cpp -o CMakeFiles/test.dir/stuff.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/algorithms/shellSort/stuff.cpp -o CMakeFiles/test.dir/stuff.cpp.s
 
 # Object files for target test
 test_OBJECTS = \

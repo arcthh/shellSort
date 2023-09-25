@@ -33,10 +33,10 @@ int main()
    srand(time(0));		// keep this line if you want to generate different random objects for each run
     // Example: Generate 5 random vectors of Stuff, each with 10 elements
     int numVectors = 100;
-    int numElementsPerVector = 15000;
+    int numElementsPerVector = 9000;
     std::vector<std::vector<Stuff>> vec = generateRandomStuffVectors(numVectors, numElementsPerVector);
 
-    ofstream outputFile("compareCountsn15000.csv");
+    ofstream outputFile("compareCountsn9000.csv");
     outputFile << "Observation Number, Case 0, Case 1, Case 2, Case 3, Case 4\n";
 
     for (int i = 0; i < numVectors; i++) {
