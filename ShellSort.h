@@ -10,7 +10,7 @@ void ShellSort(vector<Stuff> &s, int code) {
     //s is the vector to be sorted, find the length of vector
     int size = s.size();
     //create h list vector 
-    std::vector<int> hlist(size);
+    std::vector<int> hlist;
     int k = 0;
 
     //code is the integer denoting how hlist array is to be formed
@@ -20,7 +20,7 @@ void ShellSort(vector<Stuff> &s, int code) {
             //hlist should be 1 (insertion sort)
             hlist.push_back(1);
             k = 1;
-            cout << "Case 0";
+            cout << "Case 0" << endl;
             break;
 
         //code 1 - hlist should be  [k^2, (k-1)^2, ..., 4, 1]
@@ -29,16 +29,15 @@ void ShellSort(vector<Stuff> &s, int code) {
             while ((k * k) < size) {
                 k++;
             }
-            hlist.resize(k);
 
             //k is now largest value, so begin generating
             //go through, and generate other values of hlist until we get to last value
             for (int i = 0; i < k; i++) {
                 //iteration seq. is k^2, (k-1)^2...
-                hlist.at(i) = ((k-i) * (k-i));
+                hlist.push_back(((k-i) * (k-i)));
             }
-            cout << "Case 1";
 
+            cout << "Case 1" << endl;
             break;
 
         //code 2 - hlist should be [2^k, 2^(k-1) , 2^(k-2) , ... 2, 1] 
@@ -47,14 +46,13 @@ void ShellSort(vector<Stuff> &s, int code) {
             while(pow(2, k) < size) {
                 k++;
             }
-            hlist.resize(k);
 
             //go through and form hlist array based on guidelines given
-            for (int i = 0; i < k; i++) {
-                hlist.at(i) = pow(2, k-i);
+            for (int i = 0; i <= k; i++) {
+                hlist.push_back(pow(2, k-i));
             }
-             cout << "Case 2";
-           
+
+            cout << "Case 2" << endl;
             break;
 
         //code 3 - hlist should be [2^k -1, 2^(k-1) -1, 2^(k-2) -1 ... 3, 1] 
@@ -64,13 +62,11 @@ void ShellSort(vector<Stuff> &s, int code) {
                 k++;
             }
             
-            hlist.resize(k);
             //form hlist array based on case 1 = 2^1 - 1
             for (int i = 0; i < k; i++) {
-                hlist.at(i) = pow(2, k-i) - 1;
+                hlist.push_back(pow(2, k-i) - 1);
             }
-            cout << "Case 3";
-
+            cout << "Case 3" << endl;
             break;
 
         //code 4
@@ -80,24 +76,18 @@ void ShellSort(vector<Stuff> &s, int code) {
                 k++;
             }
             
-            //cout << "K-VALUE: " << k << endl; 
-            //resize hlist to not waste memory
-            hlist.resize(k + 1);
-            hlist.at(0) = (1);
+           // cout << "K-VALUE: " << k << endl; 
 
             //form hlist array based on code 4
-            for (int i = 0; i < k; i++) {
-                hlist.at(i+1) = ((pow(4, i+1) + (3 * pow(2,i)) + 1));
+            for (int i = k - 1; i >= 0; i--) {
+                hlist.push_back(((pow(4, i+1) + (3 * pow(2,i)) + 1)));
             }
+            hlist.push_back(1);
+
 
             //check for 8 or fewer numbers in array to be sorted, list should be 1
             if (size <= 8) {
                 hlist.push_back(1);
-            }
-
-
-            for (int i : hlist) {
-                cout << i << " ";
             }
 
             cout << "Case 4";
@@ -111,8 +101,8 @@ void ShellSort(vector<Stuff> &s, int code) {
 
     // Implement the Shell Sort algorithm using the generated hlist
     //Implementation of shellsort referenced from King Ip Lin's Lecture on Insertion/Shell Sort
-    //hlist is list of descending number of p integers
-
+    //used youtube video for reference and understanding as well (https://www.youtube.com/watch?v=IViqgakt-Eg)
+    //hlist is list of descending number of p integers, this will be the values for the gap
     //autobased for loop to iterate through individual gap
     for (int gap : hlist) {
         // Perform Shell Sort with gap 
@@ -125,11 +115,9 @@ void ShellSort(vector<Stuff> &s, int code) {
                 s[j] = s[j - gap]; //move element to the right
                 j -= gap; // move to previous position in gap
             }
-
             // Insert temporarily stored element into correct position
             s[j] = temp;
         }
     }
-
 }
 #endif

@@ -8,13 +8,13 @@ int main()
    srand(time(0));		// keep this line if you want to generate different random objects for each run
    vector<Stuff> vec;
 
-   for (int i = 0; i < 100; i++)
+   for (int i = 0; i < 25; i++)
 	{
 	   Stuff s;
 	   vec.push_back(s);
 	}
 
-   for (int i = 0; i < 100; i++)
+   for (int i = 0; i < 25; i++)
 	{
 	   cout << vec[i] << endl;
 	}
@@ -22,9 +22,9 @@ int main()
    cout << "-----\n";
 
    // uncomment this line when the shell sort is implemented
-   ShellSort(vec, 2);
+   ShellSort(vec, 4);
 
-   for (int i = 0; i < 100; i++)
+   for (int i = 0; i < 25; i++)
 	{
 	   cout << vec[i] << endl;
 	}
