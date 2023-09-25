@@ -1,6 +1,3 @@
-#ifndef SHELLSORT_H
-#define SHELLSORT_H
-
 #include "stuff.h"
 #include <vector>
 #include <cmath>
@@ -120,4 +117,3 @@ void ShellSort(vector<Stuff> &s, int code) {
         }
     }
 }
-#endif

@@ -1,8 +1,9 @@
 #include <vector>
 #include <ctime>		// keep this line if you want to generate different random objects for each run
 #include "stuff.h"
-#include "ShellSort.h"
 #include <fstream>
+
+void ShellSort(vector<Stuff> &s, int code);
 
 // Function to generate a random Stuff object
 Stuff generateRandomStuff() {
